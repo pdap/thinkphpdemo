@@ -6,51 +6,68 @@
 	<title>西城文保</title>
 	<link rel="stylesheet" type="text/css" href="__NODE__/bootstrap/dist/css/bootstrap.css">
 	<style type="text/css">
-		body {
-			padding-bottom: 50px;
+	  html ,body {
+          height: 100%;
 		}
 		.head{
 			height:135px;
 			background-color: pink;
 		}
+
 		.tool{
-			height: 25px;
 
 		}	
 		.tool .left{
-			min-height:25px;
-			background-color: black;
+
 		} 
 		.tool .right{
-			min-height: 25px;
-			background-color: green;
+
 		}
 		.main{
-			min-height:400px;
+			height:500px;
 
 		} 
 		.main .left{
-			min-height: 400px;
-			background-color: blue;
+			height:100%;
+			background-color: green;
+		}
+		.layercontrol{
+			//图层管理面板样式
 		}
 		.main .right{
-			min-height: 400px;
+			height:100%;
 			background-color: black;
 		}
-		.bottom {
-			height: 0px;
+		.bottom {			 
+			position: fixed;
+			bottom:0; left: 49%;
+			text-align:center;
 			background-color: black;
 		}
 	</style>
 </head>
 <body>
-	
+
 	<div class="container-fluid">
 		<div class="row head">
-			<div class="col-md-10"> 
+			<div class="col-md-10 " >
 
+				<ul class="nav nav-pills nav-justified" >
+					<li role="presentation" class="active"><a href="#">西城区文物</a></li>
+					<li role="presentation"> <a href="#">修缮工程</a></li>
+					<li role="presentation"><a href="#">古代建筑与重要建筑</a></li>
+					<li role="presentation"><a href="#">法律法规</a></li>
+					<li role="presentation"><a href="#">西城区概况</a></li>
+					<li role="presentation"><a href="#">历史地图</a></li>
+				</ul>
 			</div>
 			<div class="col-md-2">
+				<div class="input-group input-group-sm">
+					<input type="text" class="form-control" placeholder="输入搜索内容">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">搜索</button>
+					</span>
+				</div><!-- /input-group -->
 				<div class="btn-group">
 					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 						你好，{:session('loginUserName')} <span class="caret"></span>
@@ -64,30 +81,51 @@
 						</ul>
 					</div>
 
-
-
-
 				</div>
 			</div>
 			<div class="row tool">
-				<div class="col-md-3 left">工具栏</div>
-				<div class="col-md-9 right">工具栏</div>
-			</div>
-			<div class="row main">
-				<div class="col-md-3 left">左侧</div>
-				<div class="col-md-6" >中间</div>
-				<div class="col-md-3 right">右侧</div>
-			</div>
-			<div class="row bottom">
-				<div class="col-md-12">
+				<div class="col-md-3 left">
+					<div class="input-group input-group-sm">
+						<input type="text" class="form-control" placeholder="输入搜索内容">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button">搜索</button>
+						</span>
+					</div><!-- /input-group --></div>
+					<div class="col-md-9 right">
+						<button class="btn btn-default" type="button">工具1</button>
+						<button class="btn btn-default" type="button">工具2</button>
+						<button class="btn btn-default" type="button">工具3</button>
+						<button class="btn btn-default" type="button">工具4</button>
+						<button class="btn btn-default" type="button">工具5</button>
+						<button class="btn btn-default" type="button">工具6</button>
+						<button class="btn btn-default" type="button">工具7</button>
+					</div>
+				</div>
+				<div class="row main">
+					<div class="col-md-3 left">
+					    <div >图层控制面板控制按钮</div>
+						<div class="layercontrol"> 图层控制面板</div>
+						<div>菜单容器</div>
+						<div>结果列表</div>
+					</div>
+					<div class="col-md-9" > 
+					    <div>三维地图容器控制按钮</div>
+						<div>三维地图容器</div>
+						<div>详细信息容器</div>
+					</div>
+
+				</div>
+				<div class="row bottom">
+					<div class="col-md-12">
+						版权信息
+					</div>
+
 				</div>
 
-			</div>
+			</div> 
 
-		</div> 
-		<nav class="navbar navbar-default navbar-fixed-bottom">
-		</nav>
-	</body>
-	<script type="text/javascript" src="__NODE__/jquery/dist/jquery.js"></script>
-	<script type="text/javascript" src="__NODE__/bootstrap/dist/js/bootstrap.js"></script>
-	</html>
+		</body>
+		<script type="text/javascript" src="__NODE__/jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="__NODE__/bootstrap/dist/js/bootstrap.js"></script>
+
+		</html>

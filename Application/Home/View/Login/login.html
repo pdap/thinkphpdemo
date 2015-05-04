@@ -2,18 +2,86 @@
 <html>
 <head lang="en">
  
-    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>西城文保</title>
+	<link rel="stylesheet" type="text/css" href="__NODE__/bootstrap/dist/css/bootstrap.css">
+	<style type="text/css">
+     body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+	</style>
     <title></title>
 </head>
 <body>
-<form method='post' name="login" id="form1" ACTION="{:U('Home/Login/checkLogin')}">
-	<input type="text" name="account">
-    <input type="password"  name="password">
-     <input type="text" name="verify" placeholder="请填写验证码" autocomplete="off">   
-    <img src="{:U('Home/Login/verify')}" alt=""  >
-<button value="登录" type="submit">s</button>
  
-</form>
+ <div class="container">
 
+      <form class="form-signin" method='post' name="login" id="form1" ACTION="{:U('Home/Login/checkLogin')}">
+        <h2 class="form-signin-heading">前台网关</h2>
+        <label for="account" class="sr-only">账户名</label>
+        <input type="text" name="account" class="form-control" placeholder="账户名" required autofocus>
+        <label for="password" class="sr-only">密码</label>
+        <input type="password" name="password" class="form-control" placeholder="Password" required>
+        <input type="text" name="verify" class="form-control"  placeholder="请填写验证码" autocomplete="off" required> 
+        <a href="#" title="点击更换验证码"> <img id="verify"  src="{:U('Home/Login/verify')}" alt="点我更换验证码" class="img-responsive" ></a>  
+       
+        <button class="btn btn-lg btn-primary btn-block" type="submit">登入</button>
+      </form>
+
+    </div> <!-- /container -->
 </body>
+<script type="text/javascript" src="__NODE__/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="__NODE__/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript">
+ // 给验证码绑定单击刷新功能
+	$(function(){
+		var verifyimg = $('#verify').attr("src");
+            $('#verify').click(function(){
+                if( verifyimg.indexOf('?')>0){
+                    $('#verify').attr("src", verifyimg+'&random='+Math.random());
+                }else{
+                    $('#verify').attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());
+                }
+            });
+	})
+	 
+</script>
 </html>

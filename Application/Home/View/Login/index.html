@@ -55,13 +55,13 @@
  <div class="container">
 
       <form class="form-signin" method='post' name="login" id="form1" ACTION="{:U('Home/Login/checkLogin')}">
-        <h2 class="form-signin-heading">请登录</h2>
+        <h2 class="form-signin-heading">前台网关</h2>
         <label for="account" class="sr-only">账户名</label>
         <input type="text" name="account" class="form-control" placeholder="账户名" required autofocus>
         <label for="password" class="sr-only">密码</label>
         <input type="password" name="password" class="form-control" placeholder="Password" required>
         <input type="text" name="verify" class="form-control"  placeholder="请填写验证码" autocomplete="off" required> 
-        <a href="#" title="点击更换验证码" onclick="change_verify()"> <img id="verify"  src="{:U('Home/Login/verify')}" alt="点我更换验证码" class="img-responsive" ></a>  
+        <a href="#" title="点击更换验证码"> <img id="verify"  src="{:U('Home/Login/verify')}" alt="点我更换验证码" class="img-responsive" ></a>  
        
         <button class="btn btn-lg btn-primary btn-block" type="submit">登入</button>
       </form>
@@ -71,26 +71,17 @@
 <script type="text/javascript" src="__NODE__/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="__NODE__/bootstrap/dist/js/bootstrap.js"></script>
 <script type="text/javascript">
-
+ // 给验证码绑定单击刷新功能
 	$(function(){
-		var verifyimg = $(".verifyimg").attr("src");
-            $(".reloadverify").click(function(){
+		var verifyimg = $('#verify').attr("src");
+            $('#verify').click(function(){
                 if( verifyimg.indexOf('?')>0){
-                    $(".verifyimg").attr("src", verifyimg+'&random='+Math.random());
-                }else{
-                    $(".verifyimg").attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());
-                }
-            });
-	})
-	function change_verify(){
-		  var verifyimg = $('#verify').attr("src");
-           if( verifyimg.indexOf('?')>0){
                     $('#verify').attr("src", verifyimg+'&random='+Math.random());
                 }else{
                     $('#verify').attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());
                 }
-		 
-		
-	}
+            });
+	})
+	 
 </script>
 </html>
