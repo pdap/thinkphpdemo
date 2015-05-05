@@ -1,0 +1,6 @@
+[ 2015-05-04T10:24:17+08:00 ] ::1 /thinkphp_3.2.3_full/index.php/Home/Login/checkLogin.html
+ERR: 无法加载数据库驱动: Think\Db\Driver\Pdo
+
+[ 2015-05-04T15:04:47+08:00 ] ::1 /thinkphp_3.2.3_full/
+ERR: 无法加载数据库驱动: Think\Db\Driver\Pdo
+

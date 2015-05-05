@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<menu name="一级菜单">
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+	</menu>
+	<menu name="一级菜单">
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+	</menu>
+	<menu name="一级菜单">
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+		<item></item>
+	</menu>
+
+</root>

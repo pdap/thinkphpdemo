@@ -1,0 +1,6 @@
+[ 2015-04-30T14:37:38+08:00 ] ::1 /thinkphp_3.2.3_full/index.php/Index/index.html
+ERR: 无法加载模块:Index
+
+[ 2015-04-30T14:38:52+08:00 ] ::1 /thinkphp_3.2.3_full/index.php/thinkphp_3.2.3_full/index.php/Home/Index/index.html.html
+ERR: 无法加载模块:Thinkphp_3.2.3_full
+

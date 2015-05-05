@@ -1,0 +1,45 @@
+[ 2015-05-05T14:40:53+08:00 ] ::1 /thinkphp_3.2.3_full/index.php/Home/Index/url
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:url
+
+[ 2015-05-05T14:41:35+08:00 ] ::1 /thinkphp_3.2.3_full/index.php/Home/Index/url
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:url
+
+[ 2015-05-05T15:04:53+08:00 ] ::1 /thinkphp_3.2.3_full/index.php/Home/Index/xml/test.xml
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:xml
+
+[ 2015-05-05T15:05:54+08:00 ] ::1 /thinkphp_3.2.3_full/index.php/Home/xml/test.xml
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Xml
+
+[ 2015-05-05T15:10:29+08:00 ] ::1 /thinkphp_3.2.3_full/index.php/Home/xml/test.xml
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Xml
+
+[ 2015-05-05T15:13:12+08:00 ] ::1 /thinkphp_3.2.3_full/index.php/Home/Index/Public/Home/xml/test.xml
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:Public
+
+[ 2015-05-05T15:13:35+08:00 ] ::1 /thinkphp_3.2.3_full/index.php/Home/Index/Public/Home/xml/test.xml
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:Public
+
+[ 2015-05-05T15:18:11+08:00 ] ::1 /thinkphp_3.2.3_full/index.php/Home/Index/Public/Home/xml/test.xml
+ERR: 非法操作:Public
+
