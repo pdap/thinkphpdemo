@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<menu name="基础图层" queryfield="保护等级" feature="服务地址" table="shp_baohuqu">		
+		 <item>模型</item>
+		 <item>dem</item>
+		 <item>dom</item>
+	</menu>
+	<menu name="文件类图层" queryfield="" feature="服务地址">	
+	 <item>连控地带</item>	 	
+	 <item>保护区范围</item>
+	</menu>
+	 
+</root>

@@ -6,11 +6,11 @@ define(function(){
 	 
 	function _init (){
         // 调用的时候执行
-        // 调取数据后渲染HTML
+        // 调取数据
         _getdata().then(function(res){
         	var xml = $( res ),
-        		title = xml.find( 'menu' ),
-        	    menu=  _domid();
+              title = xml.find( 'menu' ),
+              menu=  _domid();
         	menu.html('');
         	console.log(title);
         	for (var i = 0; i < title.length; i++) {
@@ -19,11 +19,11 @@ define(function(){
         			+'</a></div>');
         		var items= title[i].getElementsByTagName('item') ;
         		for (var j = 0; j < items.length; j++) {
-        			 var item=items[j]['innerHTML']||items[j]['textContent'];
-        			menu.children().last().append('<a href="#">'
-        				+ item
-        				+'</a>') ;	 
-        		}
+               var item=items[j]['innerHTML']||items[j]['textContent'];
+              menu.children().last().append('<a href="#">'
+                + item
+                +'</a>') ;   
+            }
         	};
 
 
@@ -35,7 +35,7 @@ define(function(){
     // 调取模块初始化所需数据
     function _getdata(){
     	var s=$.get($.appContext.baseUrl
-    		+'/Public/Home/xml/gujianzhu.xml',
+    		+'/Public/Home/xml/falufagui.xml',
     		function(res){
     		return res;
     	}) ;  
@@ -45,13 +45,13 @@ define(function(){
  
 
    var _btnid= function(){
-   	return $('#'+"zyjz"); 
+   	return $('#'+"flfg"); 
    } // 缓存模块主按钮jq对象
    var _domid=function(){
-   	return $('#'+"zyjz_UI");
+   	return $('#'+"flfg_UI");
    } // 缓存模块主面板jq对象
 
-  // 当模块被调用的时候会执行此方法
+    // 当模块被调用的时候会执行此方法
 
 // 私有方法和属性结束
 // =========================================
@@ -62,25 +62,24 @@ define(function(){
       	},
       	btnid:_btnid(),
       	domid:_domid(),
-      	visiable:false,
+        visiable:false,
       	eventbind:function(){
-
-         console.log('模块2事件绑定');
-         var t=this;
+  
+         console.log('模块3事件绑定');
+         var t =this;
          this.btnid.on('click',function(e){
          t.show();
-         console.log('模块2事件触发');
+         console.log('模块3事件触发');
          });
       	},
-        show:function(){
-      			 $.appContext['closeall']();
+      	 show:function(){
+           $.appContext['closeall']();
          this.domid.show();
          this.visiable=true;
-
         },
         close:function(){
-      	this.domid.hide();
-      	this.visiable=false;
+        this.domid.hide();
+        this.visiable=false;
         }
   }
 })

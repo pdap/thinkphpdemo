@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<menu name="保护区范围" feature="服务地址" table="">
+		<item><!-- 默认查询关键字 -->name</item>
+
+	</menu>
+	<menu name="道路" feature="服务地址" table="shp_baohuqu">
+		<item>默认查询关键字</item>		 	
+	</menu>
+	<menu name="街巷胡同" feature="服务地址" table="">
+		<item>默认查询关键字</item>
+		<item>默认查询关键字</item>
+	</menu>
+	<menu name="安全隐患" feature="服务地址" table="">
+		<item>默认查询关键字</item>
+	</menu>
+	<nemu name="连控地带" feature="服务地址" table="">
+		<item>默认查询关键字</item>
+	</nemu>
+</root>

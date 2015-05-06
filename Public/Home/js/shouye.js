@@ -3,10 +3,10 @@ define(function(){
 	// 私有属性和方法名称使用小写字母,禁止使用驼峰风格
 	// 模块功能描述
 	// 模块内部私有方法和属性
-	 
+	  
 	function _init (){
-        // 调用的时候执行
-        // 调取数据后渲染HTML
+        //  dom加载后执行
+        //    
         _getdata().then(function(res){
         	var xml = $( res ),
         		title = xml.find( 'menu' ),
@@ -35,45 +35,45 @@ define(function(){
     // 调取模块初始化所需数据
     function _getdata(){
     	var s=$.get($.appContext.baseUrl
-    		+'/Public/Home/xml/gujianzhu.xml',
+    		+'/Public/Home/xml/layer.xml',
     		function(res){
     		return res;
     	}) ;  
           return s; // 返回异步对象，可使用s.then(funcsuccess,funcfail)来处理
       };
-
+   var  _btnid= function(){
+   	return $('#'+"shouye"); 
+   }; // 缓存模块主按钮jq对象
+   var  _domid=function(){
+   	return $('#'+"shouye_UI");
+   } ;// 缓存模块主面板jq对象
  
 
-   var _btnid= function(){
-   	return $('#'+"zyjz"); 
-   } // 缓存模块主按钮jq对象
-   var _domid=function(){
-   	return $('#'+"zyjz_UI");
-   } // 缓存模块主面板jq对象
 
-  // 当模块被调用的时候会执行此方法
-
+     // 当模块被调用的时候会执行此方法
+     
 // 私有方法和属性结束
 // =========================================
 // 需要对外暴露的方法和属性
       return{
       	init:function(){
-      		_init();
+      		 _init();
       	},
       	btnid:_btnid(),
-      	domid:_domid(),
-      	visiable:false,
+      	domid:_domid(),  
+      	visiable:false,   
       	eventbind:function(){
 
-         console.log('模块2事件绑定');
+         console.log('首页事件绑定');
          var t=this;
          this.btnid.on('click',function(e){
          t.show();
-         console.log('模块2事件触发');
+
+         console.log('首页事件触发');
          });
       	},
-        show:function(){
-      			 $.appContext['closeall']();
+      	show:function(){
+        $.appContext['closeall']();
          this.domid.show();
          this.visiable=true;
 

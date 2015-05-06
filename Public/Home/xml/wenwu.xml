@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<menu name="保护等级" queryfield="保护等级" feature="服务地址" table="shp_baohuqu">		
+		<item>世界级</item>
+		<item>国家级</item>
+		<item>市级</item>
+		<item>区级</item>
+	</menu>
+	<menu name="普查项目" queryfield="" feature="服务地址">
+		<item>关键字1</item>
+		<item>关键字2</item>
+		<item>关键字3</item>
+		<item>关键字4</item>	
+	</menu>
+	<menu name="挂牌院落" feature="服务地址">
+		<item>关键字1</item>
+		<item>关键字2</item>
+		<item>关键字3</item>
+		<item>关键字4</item>
+		<item>关键字5</item>
+		<item>关键字6</item>
+	</menu>
+
+</root>

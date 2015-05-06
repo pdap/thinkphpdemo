@@ -53,6 +53,9 @@
 
 
 		}
+		.result {
+		 display:none;
+		}
 		.layerbtn{
 			background-color: black;
 			height: 50px;
@@ -78,7 +81,8 @@
 			<div class="col-md-10 " >
 
 				<ul class="nav nav-pills nav-justified" >
-					<li role="presentation" class="active"><a href="#" id="xcqww">西城区文物</a></li>
+				    <li role="presentation" class="active"><a href="#" id="shouye">首页</a></li>
+					<li role="presentation"><a href="#" id="xcqww">西城区文物</a></li>
 					<li role="presentation"> <a href="#" id="xsgc">修缮工程</a></li>
 					<li role="presentation"><a href="#" id="zyjz">古代建筑与重要建筑</a></li>
 					<li role="presentation"><a href="#" id="flfg">法律法规</a></li>
@@ -129,19 +133,14 @@
 				<div class="row main">
 					<div class="col-md-3 left">
 						<div class="layerbtn" >图层控制面板控制按钮</div>
-						<div class="layercontrol"> 图层控制面板</div>
-						<div>
-							<div>
-								<a href="#">功能1菜单</a>
-
-							</div>
-							<div>功能2菜单</div>
-							<div>功能2菜单</div>
-							<div>功能2菜单</div>
-							<div>功能2菜单</div>
-							<div>功能2菜单</div>
-						</div>
-						<div>结果列表</div>
+						<div class="layercontrol" id="shouye_UI"> 图层控制面板</div>						
+					    <div id="xcqww_UI"><!-- 功能一UI面板 --></div>
+					    <div id="xsgc_UI">功能二UI面板</div>
+					    <div id="zyjz_UI">功能三UI面板</div>
+					    <div id="flfg_UI">功能四UI面板</div>
+					    <div id="xcgk_UI">功能五UI面板</div>
+					    <div id="lsdt_UI">功能六UI面板</div>
+						<div class="result">查询结果列表</div>
 					</div>
 					<div class="col-md-9 center"  > 
 						<div class="mapbtn">三维地图容器控制按钮</div>
@@ -161,6 +160,12 @@
 			</div> 
 			
 			<script src="__NODE__/jquery/dist/jquery.js"></script>
+			 <script type="text/javascript" >
+            (function($){
+              
+              $.appContext={baseUrl:'__ROOT__'}
+            })(jQuery)
+           </script>
 			<script src="__NODE__/bootstrap/dist/js/bootstrap.js"></script>
 			<script src="__NODE__/requirejs/require.js" data-main="__JS__/main.js"></script>
 			

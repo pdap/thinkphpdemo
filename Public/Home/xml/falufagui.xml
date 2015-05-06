@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<menu name="法律法规" queryfield="保护等级" feature="服务地址" table="shp_baohuqu">		
+		 
+	</menu>
+	<menu name="规范性文件" queryfield="" feature="服务地址">		 	
+	</menu>
+	 
+</root>
