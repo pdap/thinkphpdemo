@@ -71,6 +71,7 @@
 <script type="text/javascript" src="/thinkphp_3.2.3_full/Public/static/node_modules/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="/thinkphp_3.2.3_full/Public/static/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 <script type="text/javascript">
+
  // 给验证码绑定单击刷新功能
 	$(function(){
 		var verifyimg = $('#verify').attr("src");
@@ -81,7 +82,7 @@
                     $('#verify').attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());
                 }
             });
-	})
-	 
+	});
+	   
 </script>
 </html>

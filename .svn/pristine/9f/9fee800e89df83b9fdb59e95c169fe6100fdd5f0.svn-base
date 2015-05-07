@@ -14,15 +14,15 @@ define(function(){
         	menu.html('');
         	console.log(title);
         	for (var i = 0; i < title.length; i++) {
-        		menu.append('<ul><li><a href="#">'
+        		menu.append('<div><a href="#">'
         			+title[i].getAttribute('name')
-        			+'</a></li></ul>');
+        			+'</a></div>');
         		var items= title[i].getElementsByTagName('item') ;
         		for (var j = 0; j < items.length; j++) {
         			 var item=items[j]['innerHTML']||items[j]['textContent'];
-        			menu.children().last().append('<li><a href="#">'
+        			menu.children().last().append('<a href="#">'
         				+ item
-        				+'</a></li>') ;	 
+        				+'</a>') ;	 
         		}
         	};
 

@@ -10,19 +10,19 @@ define(function(){
         _getdata().then(function(res){
         	var xml = $( res ),
         		title = xml.find( 'menu' ),
-        	    menu=  _domid();
-        	menu.html('');
+        	  menu=  _domid();
+          	menu.html('');
         	console.log(title);
         	for (var i = 0; i < title.length; i++) {
-        		menu.append('<div><a href="#">'
+        		menu.append('<ul><li><a href="#">'
         			+title[i].getAttribute('name')
-        			+'</a></div>');
+        			+'</a></li></ul>');
         		var items= title[i].getElementsByTagName('item') ;
         		for (var j = 0; j < items.length; j++) {
         			 var item=items[j]['innerHTML']||items[j]['textContent'];
-        			menu.children().last().append('<a href="#">'
+        			menu.children().last().append('<li><a href="#">'
         				+ item
-        				+'</a>') ;	 
+        				+'</a></li>') ;	 
         		}
         	};
 

@@ -50,18 +50,18 @@
 	</style>
     <title></title>
 </head>
-<body>
+<body >
  
  <div class="container">
 
-      <form class="form-signin" method='post' name="login" id="form1" ACTION="{:U('Home/Login/checkLogin')}">
+      <form class="form-signin" method='post' name="login" id="form1" ACTION="{:U('Admin/Login/checkLogin')}">
         <h2 class="form-signin-heading">前台网关</h2>
         <label for="account" class="sr-only">账户名</label>
         <input type="text" name="account" class="form-control" placeholder="账户名" required autofocus>
         <label for="password" class="sr-only">密码</label>
         <input type="password" name="password" class="form-control" placeholder="Password" required>
         <input type="text" name="verify" class="form-control"  placeholder="请填写验证码" autocomplete="off" required> 
-        <a href="#" title="点击更换验证码"> <img id="verify"  src="{:U('Home/Login/verify')}" alt="点我更换验证码" class="img-responsive" ></a>  
+        <a href="#" title="点击更换验证码"> <img id="verify"  src="{:U('Admin/Login/verify')}" alt="点我更换验证码" class="img-responsive" ></a>  
        
         <button class="btn btn-lg btn-primary btn-block" type="submit">登入</button>
       </form>
@@ -71,7 +71,6 @@
 <script type="text/javascript" src="__NODE__/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="__NODE__/bootstrap/dist/js/bootstrap.js"></script>
 <script type="text/javascript">
-
  // 给验证码绑定单击刷新功能
 	$(function(){
 		var verifyimg = $('#verify').attr("src");
@@ -83,6 +82,6 @@
                 }
             });
 	});
-	   
+   
 </script>
 </html>

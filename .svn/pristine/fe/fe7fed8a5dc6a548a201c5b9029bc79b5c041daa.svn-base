@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<menu name="西城区行政规划" queryfield="保护等级" feature="服务地址" table="shp_baohuqu">		
+		 
+	</menu>
+	<menu name="西城区地理环境" queryfield="" feature="服务地址">		 	
+	</menu>
+	<menu name="西城区建设沿革" queryfield="" feature="服务地址">		 	
+	</menu>
+	<menu name="西城区人口状况" queryfield="" feature="服务地址">		 	
+	</menu>
+</root>

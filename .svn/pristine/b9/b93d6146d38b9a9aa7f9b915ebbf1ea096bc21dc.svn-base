@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<menu name="历史地图" queryfield="保护等级" feature="服务地址" table="shp_baohuqu">		
+		<item>元</item>
+		<item>金</item>
+		<item>明</item>
+		<item>清</item>
+		<item>民国</item>
+		<item>80年代</item>
+	</menu>
+	<menu name="老照片" queryfield="" feature="服务地址">
+		<item>关键字1</item>
+		<item>关键字2</item>
+		<item>关键字3</item>
+		<item>关键字4</item>	
+	</menu>
+</root>

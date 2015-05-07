@@ -1,12 +1,12 @@
 <?php
-namespace Home\Controller;
+namespace Admin\Controller;
 use Think\Controller;
 use Org\Util\Rbac;
 class LoginController extends Controller {
 
 	protected function checkUser() {
 		if(!isset($_SESSION[C('USER_AUTH_KEY')])) {
-			$this->error('没有登录',U('Home/Login'));
+			$this->error('没有登录',U('Admin/Login'));
 		}
 	}
 	public function index(){  
@@ -16,21 +16,22 @@ class LoginController extends Controller {
 	public function login() {
         	 
 			 if(!isset($_SESSION[C('USER_AUTH_KEY')])) {         
-			$this->display('index');
+			//$this->display('index');
+			$this->redirect('Admin/Login/index');
 
 		}else{
-			$this->redirect('Home/Index/index');
+			$this->redirect('Admin/Index/index');
 		}
 		 
 		
 	}
-	 function check_verify($code, $id = 1){
+	 public function check_verify($code, $id = 2){
 		$verify = new \Think\Verify();
 		return $verify->check($code, $id);
 	}
 	public function verify(){
 		$verify = new \Think\Verify();
-		$verify->entry(1);
+		$verify->entry(2);
 	}
       // 用户登出
 	public function logout() {
@@ -38,7 +39,7 @@ class LoginController extends Controller {
 			unset($_SESSION[C('USER_AUTH_KEY')]);
 			unset($_SESSION);
 			session_destroy();
-			$this->success('登出成功！',U('Home/Login/index'));
+			$this->success('登出成功！',U('Admin/Login/index'));
 		}else {
 			$this->error('已经登出！');
 		}
@@ -58,7 +59,7 @@ class LoginController extends Controller {
         // 支持使用绑定帐号登录
 		$map['account']	= $_POST['account'];
 		$map["status"]	=	array('gt',0);
-		if(!$this->check_verify($_POST['verify'],1)){
+		if(!$this->check_verify($_POST['verify'],2)){
 			$this->error('验证码输入错误！');
 		}
 		$authInfo = RBAC::authenticate($map);
@@ -90,7 +91,7 @@ class LoginController extends Controller {
 			 
             // 缓存访问权限
 			RBAC::saveAccessList();
-		    redirect(U('Home/Index/index'));
+		    redirect(U('Admin/Index/index'));
 			//$this->success('登录成功！',U('Home/Index/index'));
 
 		}

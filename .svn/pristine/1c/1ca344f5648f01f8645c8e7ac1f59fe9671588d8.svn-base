@@ -1,7 +1,5 @@
 //入口模块
-define(["init"],function(init){
-
-	
+define(["init"],function(){
 	require(["shouye","module0","module1","module2","module3","module4","module5"], 
 		function(shouye,m0,m1,m2,m3,m4,m5) {
 			if (shouye&&m0&&m1&&m2&&m3&&m4&&m5) {
@@ -12,7 +10,6 @@ define(["init"],function(init){
 			$(document).ready(function(){
 		   // 注意要在dom 载入之后绑定模块事件		
 		   console.log("--2--DOM载入了");	
-           init.copyright('copyright');
 
 		   var  modules=[shouye,m0,m1,m2,m3,m4,m5];
 
@@ -22,8 +19,6 @@ define(["init"],function(init){
 		   	if (i==0) continue;
 		   	modules[i].close();		   	 
 		   };
-		   $('#info').hide();
-           $('#map').show();
            
 		   $.appContext['closeall']=function(){
 		   	for (var i = 0; i < modules.length; i++) {

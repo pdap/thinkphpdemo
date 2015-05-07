@@ -34,24 +34,12 @@
 		.main .center {
 			height: 100%;
 
-
-		}
-		.main .center .mapbtn{
-
-			background-color: black;
-			height: 50px;
-			width: 20px;
-			position: absolute;
-			right:0px;
-			top:0;
-		}
+		}	 
 		.main .center .map{
 
 			position: absolute;
 			height: 100%;
-
-
-
+          
 		}
 		.result {
 		 display:none;
@@ -63,14 +51,16 @@
 			position:absolute;
 			left:0;
 			top:0px;
-
+            display: none;
 		}
 
 		.bottom {			 
 			position: fixed;
-			bottom:0; left: 49%;
+			bottom:0; right: 40%;left:40%;
 			text-align:center;
-			background-color: black;
+			background-color: gray;
+			opacity:.5;
+			filter:alpha(opacity=50);
 		}
 	</style>
 </head>
@@ -142,23 +132,19 @@
 					    <div id="lsdt_UI">功能六UI面板</div>
 						<div class="result">查询结果列表</div>
 					</div>
-					<div class="col-md-9 center"  > 
-						<div class="mapbtn">三维地图容器控制按钮</div>
-						<div class="map">三维地图容器</div>
-						<div class="info">详细信息容器</div>
+					<div class="col-md-9 center" > 
+						<div class="row">
+							<div class="col-md-12 map" id="map">三维地图容器</div>
+							<div class="col-md-12 map" id="info">详细信息容器</div>
+						</div>	 
+						
+						
 
 					</div>
 
-				</div>
-				<div class="row bottom">
-					<div class="col-md-12">
-						版权信息
-					</div>
-
-				</div>
-
+				</div>			 
 			</div> 
-			
+			<div class="bottom" id="copyright"></div>
 			<script src="/thinkphp_3.2.3_full/Public/static/node_modules/jquery/dist/jquery.js"></script>
 			 <script type="text/javascript" >
             (function($){
